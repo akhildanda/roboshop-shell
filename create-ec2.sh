@@ -26,7 +26,7 @@ for name in ${instances[@]}; do
     echo "Instance created for: $name"
 
     # Tag the instance with a Name tag corresponding to the instance name
-    aws ec2 create-tags --resources $instance_id --tags key=Name,value=$name
+    aws ec2 create-tags --resources $instance_id --tags Key=Name,Value=$name
 
     # Giving web as public IP address
     if [ $name == "web" ]
